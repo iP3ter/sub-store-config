@@ -1,4 +1,4 @@
-### 参考自https://github.com/yyhhyyyyyy/selfproxy
+### Change from https://github.com/Seameee/
 ### 全局配置
 mixed-port: 7897
 allow-lan: true
