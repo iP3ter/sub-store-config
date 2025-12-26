@@ -10,7 +10,7 @@ urls = [
 ]
 
 # 输出目录和文件名
-output_dir = "cnip"
+output_dir = "mergecnip"
 output_file = os.path.join(output_dir, "china_ip.txt")
 
 # 使用集合存储，自动去重
