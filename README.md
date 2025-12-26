@@ -23,7 +23,7 @@
 
 1.  进入 **Sub-Store** 界面，点击 `订阅管理` (Subscription)。
 2.  点击左上角的 **+ 号**。
-3.  选择导入，将 [**`sub-store组合订阅模板`**](https://raw.githubusercontent.com/iP3ter/sub-store-config/refs/heads/main/lazy/combine.json) 导入到本地配置。
+3.  选择导入，将 [**`sub-store组合订阅模板`**](https://raw.githubusercontent.com/iP3ter/sub-store-config/main/lazy/combine.json) 导入到本地配置。
 4.  在配置详情中，选择你需要整合的 **订阅**。
 5.  点击保存即可生成新的组合订阅链接。
 
@@ -32,8 +32,8 @@
 ## 托管配置模板
 
 ### 包含内容
-- [**Mihomo 配置**](https://raw.githubusercontent.com/iP3ter/sub-store-config/refs/heads/main/lazy/mihomo.json)
-- [**Sing-box 配置**](https://raw.githubusercontent.com/iP3ter/sub-store-config/refs/heads/main/lazy/singbox.json)
+- [**Mihomo 配置**](https://raw.githubusercontent.com/iP3ter/sub-store-config/main/lazy/mihomo.json)
+- [**Sing-box 配置**](https://raw.githubusercontent.com/iP3ter/sub-store-config/main/lazy/singbox.json)
 
 ### 使用方法
 
