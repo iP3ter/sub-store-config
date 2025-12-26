@@ -1,0 +1,51 @@
+{
+    "name": "mihomo",
+    "displayName": "mihomo",
+    "remark": "",
+    "icon": "https://raw.githubusercontent.com/cc63/ICON/main/icons/Clash.png",
+    "source": "local",
+    "sourceType": "collection",
+    "sourceName": "combine",
+    "process": [
+        {
+            "type": "Script Operator",
+            "args": {
+                "content": "https://raw.githubusercontent.com/iP3ter/sub-config/refs/heads/main/selfuse_remote.yaml",
+                "mode": "link",
+                "arguments": {}
+            },
+            "id": "57058481.78778347",
+            "disabled": false
+        },
+        {
+            "type": "Script Operator",
+            "args": {
+                "content": "// 如果使用组合订阅模板中，自动选择中继节点的链式代理脚本，可以启用这个脚本隐藏中继选择策略组\nfunction main(config) {\n  config[\"proxy-groups\"].forEach((group) => {\n    if (group.name === \"中继选择\") {\n      group.hidden = true;\n    }\n  });\n  return config;\n}",
+                "mode": "script",
+                "arguments": {}
+            },
+            "customName": "",
+            "id": "24772717.359092887",
+            "disabled": false
+        },
+        {
+            "type": "Script Operator",
+            "args": {
+                "content": "function main(config) {\n  config[\"proxy-groups\"].forEach((group) => {\n    if (group.name === \"香港节点\" || \n        group.name === \"日本节点\" ||\n        group.name === \"韩国节点\" ||\n        group.name === \"狮城节点\" ||\n        group.name === \"美国节点\" ||\n        group.name === \"英国节点\" ||\n        group.name === \"法国节点\" ||\n        group.name === \"德国节点\" ||\n        group.name === \"台湾节点\" ) {\n      group.hidden = false;\n    }\n  });\n  return config;\n}",
+                "mode": "script",
+                "arguments": {}
+            },
+            "customName": "",
+            "id": "8934563.127747474",
+            "disabled": false
+        }
+    ],
+    "type": "mihomoProfile",
+    "content": "// 填入文件内容\n",
+    "download": true,
+    "display-name": "mihomo",
+    "ignoreFailedRemoteFile": false,
+    "subInfoUrl": "",
+    "isIconColor": true,
+    "tag": []
+}
