@@ -264,7 +264,7 @@ rule-providers:
 
   china_ip:
     <<: *RuleSet_ipcidr
-    url: https://testingcf.jsdelivr.net/gh/Seameee/override-hub@refs/heads/main/mergecnip/china_ip.txt
+    url: https://raw.githubusercontent.com/iP3ter/sub-store-config/main/mergecnip/china_ip.txt
     path: ./rule_set/other_ruleset/china_ip.txt
 
 # 分流规则
