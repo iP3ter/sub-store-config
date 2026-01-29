@@ -97,10 +97,12 @@ proxy-groups:
   # 特殊分组
   - {name: 中继选择, <<: *Select, filter: *FilterAll, icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Final.png}
   - {name: 落地选择, <<: *Select, filter: *FilterLanding, icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png}
+  - {name: 落地选择2, <<: *Select, filter: *FilterLanding, icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png}
+
 
   # 应用分组
   - {name: 电报信息, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png}
-  - {name: 人工智能, type: select, proxies: [狮城节点, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png}
+  - {name: 人工智能, type: select, proxies: [狮城节点, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择2, 落地选择, 香港节点, 日本节点, 韩国节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png}
   - {name: 苹果服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png}
   - {name: 微软服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Microsoft.png}
   - {name: 国外媒体, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Streaming.png}
