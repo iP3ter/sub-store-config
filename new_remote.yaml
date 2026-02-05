@@ -265,6 +265,12 @@ rule-providers:
     url: https://ruleset.skk.moe/Clash/domainset/speedtest.txt
     path: ./rule_set/sukkaw_ruleset/networktest.txt
 
+  # Emby分流
+  emby:
+    <<: *RuleSet_classical
+    url: https://raw.githubusercontent.com/iP3ter/sub-store-config/main/rules/Emby.yaml
+    path: ./rule_set/other_ruleset/emby.yaml
+
   domestic_ip:
     <<: *RuleSet_classical
     url: https://ruleset.skk.moe/Clash/ip/domestic.txt
@@ -293,6 +299,8 @@ rules:
 
   ### Speedtest 修复：必须在 cn / domestic 前
   - RULE-SET,networktest,节点选择
+  ### Emby
+  - RULE-SET,emby,节点选择
 
   - RULE-SET,global_non_ip,节点选择
   - RULE-SET,domestic_non_ip,DIRECT
