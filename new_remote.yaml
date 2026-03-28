@@ -107,7 +107,7 @@ proxy-groups:
   - {name: 微软服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Microsoft.png}
   - {name: 国外媒体, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Streaming.png}
   - {name: Steam商店社区, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点, DIRECT], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png}
-  - {name: Steam平台, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点, DIRECT], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Game.png}
+  - {name: Steam平台, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png}
 
   # 自动选择 - 按地区 (已改为手动选择)
   - {name: 香港节点, <<: *Select, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png}
