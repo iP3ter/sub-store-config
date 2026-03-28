@@ -106,6 +106,8 @@ proxy-groups:
   - {name: 苹果服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png}
   - {name: 微软服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Microsoft.png}
   - {name: 国外媒体, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Streaming.png}
+  - {name: Steam商店社区, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点, DIRECT], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Steam.png}
+  - {name: Steam平台, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点, DIRECT], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Game.png}
 
   # 自动选择 - 按地区 (已改为手动选择)
   - {name: 香港节点, <<: *Select, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png}
@@ -221,6 +223,21 @@ rule-providers:
     <<: *RuleSet_classical
     url: https://ruleset.skk.moe/Clash/non_ip/microsoft.txt
     path: ./rule_set/sukkaw_ruleset/microsoft_non_ip.txt
+
+  SteamCN:
+    <<: *RuleSet_classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/SteamCN.yaml
+    path: ./rule_set/custom_ruleset/SteamCN.yaml
+
+  steamstore:
+    <<: *RuleSet_classical
+    url: https://raw.githubusercontent.com/caserangle/clash-rule/main/steamstore.yaml
+    path: ./rule_set/custom_ruleset/steamstore.yaml
+
+  Steam:
+    <<: *RuleSet_classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml
+    path: ./rule_set/custom_ruleset/Steam.yaml
   
   # 内网域名和局域网 IP
   lan_non_ip:
@@ -279,6 +296,11 @@ rules:
   - RULE-SET,apple_cn_non_ip,DIRECT
   - RULE-SET,apple_services,苹果服务
   - RULE-SET,microsoft_non_ip,微软服务
+
+  ### Steam 分流
+  - RULE-SET,SteamCN,Steam平台
+  - RULE-SET,steamstore,Steam商店社区
+  - RULE-SET,Steam,Steam平台
 
   ### Speedtest 修复：必须在 cn / domestic 前
   - RULE-SET,networktest,节点选择
