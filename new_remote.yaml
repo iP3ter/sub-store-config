@@ -232,22 +232,6 @@ rule-providers:
     <<: *RuleSet_classical
     url: https://ruleset.skk.moe/Clash/non_ip/microsoft.txt
     path: ./rule_set/sukkaw_ruleset/microsoft_non_ip.txt
-
-  # Steam
-  steam_domainset:
-    <<: *RuleSet_domain
-    url: https://ruleset.skk.moe/Clash/domainset/steam.txt
-    path: ./rule_set/sukkaw_ruleset/steam_domainset.txt
-
-  steam_non_ip:
-    <<: *RuleSet_classical
-    url: https://ruleset.skk.moe/Clash/non_ip/steam.txt
-    path: ./rule_set/sukkaw_ruleset/steam_non_ip.txt
-
-  steam_ip:
-    <<: *RuleSet_classical
-    url: https://ruleset.skk.moe/Clash/ip/steam.txt
-    path: ./rule_set/sukkaw_ruleset/steam_ip.txt
   
   # 内网域名和局域网 IP
   lan_non_ip:
@@ -307,12 +291,8 @@ rules:
   - RULE-SET,apple_services,苹果服务
   - RULE-SET,microsoft_non_ip,微软服务
 
-  ### Steam
-  - RULE-SET,steam_domainset,Steam
-  - RULE-SET,steam_non_ip,Steam
-
-  - RULE-SET,download_domainset,Steam
-  - RULE-SET,download_non_ip,Steam
+  - RULE-SET,download_domainset,节点选择
+  - RULE-SET,download_non_ip,节点选择
   
   ### Speedtest 修复
   - RULE-SET,networktest,节点选择
@@ -327,7 +307,6 @@ rules:
   - RULE-SET,reject_ip,REJECT
   - RULE-SET,telegram_ip,电报信息,no-resolve
   - RULE-SET,stream_ip,国外媒体
-  - RULE-SET,steam_ip,Steam,no-resolve
   - RULE-SET,lan_ip,DIRECT,no-resolve
   - RULE-SET,domestic_ip,DIRECT
   - RULE-SET,china_ip,DIRECT
